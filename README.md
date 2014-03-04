@@ -16,21 +16,21 @@ You can use the installation/management [scripts](https://gist.github.com/Edelwi
 Manual installation/management
 ------------------------------
 1. Installation
-⋅⋅* Clonning the git repository
-⋅⋅ ```bash
+⋅⋅*  Clonning the git repository
+```bash
 git clone https://github.com/Tux-FreeHost/tfhpanel.git
 ```
 ⋅⋅* Installing the dependencies for the tfhpanel
-⋅⋅ ```bash
+```bash
 python setup.py develop
 ```
 ⋅⋅* Initialize the DB and add the default data
-⋅⋅ ```bash
+```bash
 python tfh.py -c development.ini initdb
 ```
 
 2. Management
 ⋅⋅* Run the developement server
-⋅⋅```bash
+```bash
 pserve development.ini
 ```
