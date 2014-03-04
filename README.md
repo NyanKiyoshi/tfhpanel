@@ -8,13 +8,29 @@ you can [follow](https://twitter.com/tuxfreehost) the project on twitter,
 read [the blog](http://tux-fh.net/posts.html), post in
 [the forum](http://forum.tux-fh.net), or come chat with us on #TuxFH @ Freenode.
 
-Installation and Management
----------------------------
+Installation/management scripts
+-------------------------------
 You can use the installation/management [scripts](https://gist.github.com/Edelwin/7857978) which uses python3, or the
 [python2 one](https://gist.github.com/NyanKiyoshi/9028494)
 
-If you just want to launch the panel, you (really) should activate the virtual environment and type : 
-```bash
-bin/pserve development.ini
+Manual installation/management
+------------------------------
+1. Installation
+⋅⋅* Clonning the git repository
+⋅⋅ ```bash
+git clone https://github.com/Tux-FreeHost/tfhpanel.git
 ```
-(it implies that you have satisfied all the dependencies)
+⋅⋅* Installing the dependencies for the tfhpanel
+⋅⋅ ```bash
+python setup.py develop
+```
+⋅⋅* Initialize the DB and add the default data
+⋅⋅ ```bash
+python tfh.py -c development.ini initdb
+```
+
+2. Management
+⋅⋅* Run the developement server
+⋅⋅```bash
+pserve development.ini
+```
